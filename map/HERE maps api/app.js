@@ -2,11 +2,11 @@ var platform = new H.service.Platform({
     'apikey': '7f1S17sXDV1fKfKFWCrzSpcAlPVvFKabeaRp-jP0xSE'
 });
 
-      var maptypes = platform.createDefaultLayers();
+var defaultLayers = platform.createDefaultLayers();
 
       var map = new H.Map(
         document.getElementById('mapContainer'),
-        maptypes.vector.normal.map,
+        defaultLayers.vector.normal.map,
         {
           zoom: 10,
           center: { lng: -123.1, lat:49.25   }
@@ -45,3 +45,4 @@ map.addEventListener('tap', function(evt) {
 });
 
 var behavior = new H.mapevents.Behavior(mapEvents);
+var ui = H.ui.UI.createDefault(map, defaultLayers);
