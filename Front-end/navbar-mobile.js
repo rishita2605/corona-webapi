@@ -1,5 +1,5 @@
 //variables + eventListener
-$(".mode").on('click',modeChange);
+//$(".mode").on('click',modeChange);
 var mo=$(".mode");
 var icon=$(".mode-icon");
 
@@ -36,6 +36,8 @@ function move(id, position) {
 }
 
 
+/*
+
 //dark mode-light mode switching
 function modeChange(){
   
@@ -53,6 +55,8 @@ function modeChange(){
   }
 }
 
+
+
 function light(){
     console.log("light");
     console.log(icon);
@@ -66,6 +70,14 @@ function light(){
     //icon transition end
 
     //layout transition start
+    $(".main").css("color","rgba(12, 18, 44, 1)");
+    $(".affected-areas").css("color","rgba(12, 18, 44, 1)");
+    $("#navbarContainer").css("background-image","linear-gradient(45deg,rgba(0, 163, 255, 1),rgba(170, 170, 248, 1))");
+    $("input").css("background-color","transparent");
+    $("#bg").css("background-color","rgba(0, 163, 255, 1)");
+    $("#bgBubble").css("background-color","rgba(0, 163, 255, 1)");
+    $(".icon").css("color","rgba(12, 18, 44, 1)");
+    $(".bef-icon").css("color","rgba(12, 18, 44, 1)");
 }
 
 function dark(){
@@ -80,4 +92,14 @@ function dark(){
     //icon transition end
 
     //layout transition start
+    $(".main").css("color","rgba(223, 243, 255, 1)");
+    $(".affected-areas").css("color","rgba(223, 243, 255, 1)");
+    $("#navbarContainer").css("background-image","none");
+    $("#navbarContainer").css("background-color","rgba(17, 29, 67, 1)");
+    $("input").css("background-color","rgba(17, 29, 67, 1)");
+    $("#bg").css("background-color","rgba(17, 29, 67, 1)");
+    $("#bgBubble").css("background-color","rgba(17, 29, 67, 1)");
+
 }
+
+*/
