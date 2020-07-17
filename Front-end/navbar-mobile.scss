@@ -2,10 +2,10 @@ $big-bubble:64px;
 $height-field: 2em;
 $font-size-custom: 1em;
 $before-color:rgba(170, 170, 248, 1);
-$after-color: rgba(0, 163, 255, 1);
+$after-color: rgba(131, 210, 255, 1);
 $dark-bg:rgba(12, 18, 44, 1);
 $light-bg:rgba(17, 29, 67, 1);
-$font-color:rgba(177, 225, 252, 1);
+$font-color:rgba(223, 243, 255, 1);
 $icon-color:rgba(12, 18, 44, 1);
 $gradient-color-1:rgba(170, 170, 248, 1);
 $gradient-color-2:rgba(0, 163, 255, 1);
@@ -31,7 +31,7 @@ body {
     align-items: center;
     margin: 0;
     overflow: hidden;
-    color: rgba(229, 229, 229, 1);
+    color: $font-color;
   }
   .formi{
     display: flex;
@@ -215,11 +215,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    h2{
-      color: #fff;
-      font-family: sans-serif;
-      font-weight: 400;
-    }
   }
   .content{
     display: none;
@@ -239,13 +234,13 @@ body {
     grid-row: 1/1; 
     font-weight: 700;
     font-size: 1.4rem;
-    margin-left: 0.5em;
+    margin-left: 0.4em;
     overflow: hidden;
     
   }
   .affected-areas{
     grid-row: 2/2;
-    margin-left: 0.5em;
+    margin-left: 0.45em;
     font-weight: 400;
     font-size: 1.2em;
   }
@@ -255,6 +250,9 @@ body {
     height:100%;
     width: 100%;
     border-radius: 0.5em;
+  }
+  .mode{
+    position: absolute;
   }
 
 }
