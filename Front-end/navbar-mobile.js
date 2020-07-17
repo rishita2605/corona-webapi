@@ -16,7 +16,7 @@ function move(id, position) {
       .to("#bgBubble", {duration: 0.2, left: position, ease: "ease-in-out"}, 0.1)
       .to("#bgBubble", {duration: 0.15, bottom: "-50px", ease: "ease-out"}, '-=0.2')
       .to(`#bubble${id}`, {duration: 0.15, y: "0%", opacity: 1, boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)', ease: "ease-out"}, '-=0.1')
-      .to(`#bubble${id}> span`, {duration: 0.15, y: "0%", opacity: 0.7, ease: "ease-out"}, '-=0.1')
+      .to(`#bubble${id}> span`, {duration: 0.15, y: "0%", opacity: 1, ease: "ease-out"}, '-=0.1')
 
     //console.log($(`#bubble${id}`).css("transform"));
     //setting visibility of prev icon when it rises up to a bubble
@@ -27,7 +27,7 @@ function move(id, position) {
       }
       else{
         console.log("visible");
-        $(`#menu${i}`).css("opacity","0.7");
+        $(`#menu${i}`).css("opacity","1");
       }
     }
 }
