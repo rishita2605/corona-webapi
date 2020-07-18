@@ -16,9 +16,9 @@ let citynames=[];
               (citymap[i].cases),
               {
                 style: {
-                  strokeColor: 'rgba(131, 210, 255, 0.7)', // Color of the perimeter
+                  strokeColor: 'rgba(253, 90, 111, 1)', // Color of the perimeter
                   lineWidth: 1,
-                  fillColor: 'rgba(131, 210, 255, 0.4)'  // Color of the circle
+                  fillColor: 'rgba(253, 90, 111, 0.5)'  // Color of the circle
                 }
               }
             ));
@@ -34,8 +34,9 @@ let citynames=[];
 function setStyle(map){
   
   var provider = map.getBaseLayer().getProvider();
-  
-  var style = new H.map.Style('https://heremaps.github.io/maps-api-for-javascript-examples/change-style-at-load/data/dark.yaml',
+  //styling the map bg color in dark.yaml
+  //https://heremaps.github.io/maps-api-for-javascript-examples/change-style-at-load/data/dark.yaml
+  var style = new H.map.Style('dark.yaml',
     'https://js.api.here.com/v3/3.1/styles/omv/');
   // set the style on the existing layer
   provider.setStyle(style);
