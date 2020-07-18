@@ -16,9 +16,9 @@ let citynames=[];
               (citymap[i].cases),
               {
                 style: {
-                  strokeColor: 'rgba(139,0,0 ,0.8 )', // Color of the perimeter
+                  strokeColor: 'rgba(131, 210, 255, 0.7)', // Color of the perimeter
                   lineWidth: 1,
-                  fillColor: 'rgba(239,83,80 ,0.5)'  // Color of the circle
+                  fillColor: 'rgba(131, 210, 255, 0.4)'  // Color of the circle
                 }
               }
             ));

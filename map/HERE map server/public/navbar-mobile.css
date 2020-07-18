@@ -253,8 +253,8 @@ body {
     display: -ms-grid;
     display: grid;
     padding: 2em 2em 1em 2em;
-    height: 10%;
-    width: 50%;
+    height: 100%;
+    width: 100%;
     z-index: 9;
   }
   #menu1 {
@@ -310,5 +310,8 @@ body {
    transition: all 200ms ease-out;
   }
 */
+  #mapContainer {
+    border-radius: 0.5em;
+  }
 }
 /*# sourceMappingURL=navbar-mobile.css.map */
