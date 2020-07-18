@@ -214,7 +214,7 @@ global:
   ]
 
   #global map colours
-  land_color: rgba(104, 81, 241, 1)
+  land_color: rgba(49, 39, 111, 1)
   beach_color: rgb (60, 60, 60)
   glacier_color: rgb (255, 255, 255)
   woodland_color: rgba(2, 70, 134, 1)
