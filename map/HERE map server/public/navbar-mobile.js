@@ -56,7 +56,12 @@ console.log(elements);
 var mapCont=elements[2];
 console.log(mapCont);
 $(mapCont).css("border-radius","0.5em");
-console.log($(mapCont).css("border-radius"));
+
 //$("element").css("border-radius","0.5em");
 
+var view=$(".H_btn");
+console.log(view);
 
+var del=view[2];
+console.log(del);
+$(del).remove();
