@@ -25,81 +25,38 @@ function move(id, position) {
     //setting visibility of prev icon when it rises up to a bubble
     for(var i=1;i<=4;i++){
       if(i==id){
-        console.log("invisible");
         $(`#menu${id}`).css("opacity","0");
       }
       else{
-        console.log("visible");
         $(`#menu${i}`).css("opacity","1");
       }
     }
 }
 
 
-/*
 
-//dark mode-light mode switching
-function modeChange(){
-  
-  console.log(mo.css("background-color"));
-  if(mo.css("background-color")=="rgb(0, 163, 255)"){
-    icon.css("transform","scale(0.1)");
-    //mo.css("transform","scale(0.1)");
-    setTimeout(light,200);
-    
-  }
-  else{
-    icon.css("transform","scale(0.1)");
-    //mo.css("transform","scale(0.1)");
-    setTimeout(dark,200);
-  }
-}
+//styling the map
+$(".H_btn").css("background-color","#0ea4fe");
+$("svg.H_icon").css("fill","#05053c");
+$(".H_scalebar").css("text-shadow","none");
+$("polyline").css("stroke","white");
+$(".H_context_menu_item_separator").css("border-top","2px solid #05053c");
+
+//performing this since the div to be changed has no class
+//alternative which didn't work
+//$('div[style~="overflow: hidden;"]').css("border-radius","0.5em");
+
+var elements = $("div").filter(function() {
+  // only keep the elements that have the correct value for overflow
+  return $(this).css("overflow") === "hidden";
+});
+
+console.log(elements);
+
+var mapCont=elements[2];
+console.log(mapCont);
+$(mapCont).css("border-radius","0.5em");
+console.log($(mapCont).css("border-radius"));
+//$("element").css("border-radius","0.5em");
 
 
-
-function light(){
-    console.log("light");
-    console.log(icon);
-    icon.css("transform","scale(1)");
-    //mo.css("transform","scale(1)");
-
-    mo.css("background-color","rgba(17, 29, 67, 1)");
-    mo.css("color","white");
-    icon.removeClass("fas fa-moon");
-    icon.addClass("fas fa-sun");
-    //icon transition end
-
-    //layout transition start
-    $(".main").css("color","rgba(12, 18, 44, 1)");
-    $(".affected-areas").css("color","rgba(12, 18, 44, 1)");
-    $("#navbarContainer").css("background-image","linear-gradient(45deg,rgba(0, 163, 255, 1),rgba(170, 170, 248, 1))");
-    $("input").css("background-color","transparent");
-    $("#bg").css("background-color","rgba(0, 163, 255, 1)");
-    $("#bgBubble").css("background-color","rgba(0, 163, 255, 1)");
-    $(".icon").css("color","rgba(12, 18, 44, 1)");
-    $(".bef-icon").css("color","rgba(12, 18, 44, 1)");
-}
-
-function dark(){
-    console.log("dark");
-    console.log(icon);
-    icon.css("transform","scale(1)");
-    //mo.css("transform","scale(1)");
-    mo.css("background-color","rgba(0, 163, 255, 1)");
-    mo.css("color","rgba(12, 18, 44, 1)");
-    icon.removeClass("fas fa-sun");
-    icon.addClass("fas fa-moon");
-    //icon transition end
-
-    //layout transition start
-    $(".main").css("color","rgba(223, 243, 255, 1)");
-    $(".affected-areas").css("color","rgba(223, 243, 255, 1)");
-    $("#navbarContainer").css("background-image","none");
-    $("#navbarContainer").css("background-color","rgba(17, 29, 67, 1)");
-    $("input").css("background-color","rgba(17, 29, 67, 1)");
-    $("#bg").css("background-color","rgba(17, 29, 67, 1)");
-    $("#bgBubble").css("background-color","rgba(17, 29, 67, 1)");
-
-}
-
-*/
