@@ -1,0 +1,317 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  -webkit-transition: color, background-color, background-image 200ms ease;
+  transition: color, background-color, background-image 200ms ease;
+}
+
+body {
+  background: pink;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  overflow: hidden;
+  color: #a0d6f8;
+}
+
+.formi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  height: 2em;
+  overflow: hidden;
+  margin-left: 0.5em;
+}
+
+.formi input {
+  outline: none;
+  background-color: none;
+  border: none;
+  height: 100%;
+  width: 100%;
+  padding-top: 1em;
+  background-color: #111d43;
+  color: #aaaaf8;
+}
+
+.formi input:focus + .label-name .content-name, .formi input:valid + .label-name .content-name {
+  /* :valid ensures that when input text is added and the focus is shifted somwehere else
+            the label doesn't come back to its initial position*/
+  color: #83d2ff;
+  font-size: 0.9em;
+  -webkit-transform: translateY(-60%);
+          transform: translateY(-60%);
+}
+
+.formi label {
+  outline: none;
+  background-color: none;
+  border: none;
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  border-bottom: 0.1em solid #aaaaf8;
+  color: #aaaaf8;
+}
+
+.formi label::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-bottom: 0.1em solid #83d2ff;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  /*Moving the blue line out of frame initially also, 
+            since overflow is not hidden it is visible on the frame when overflow:hidden; 
+            not applied to parent*/
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+}
+
+.content-name {
+  position: absolute;
+  top: 0.5em;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  font-size: 1em;
+}
+
+.formi input:focus + .label-name::after, .formi input:valid + label::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  border-color: #83d2ff;
+}
+
+@media screen and (max-width: 450px) {
+  #navbarContainer {
+    width: 100%;
+    height: 100%;
+    background-color: #111d43;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+  #navbar {
+    width: 100%;
+    height: 12%;
+    /*60px*/
+    background-image: linear-gradient(135deg, #aaaaf8, #00a3ff);
+    padding-top: 0.5em;
+    position: relative;
+    /*absolute*/
+  }
+  #bubbleWrapper {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+    bottom: 1.8em;
+  }
+  .bubble {
+    background-image: linear-gradient(135deg, #aaaaf8, #00a3ff);
+    width: 50px;
+    height: 50px;
+    /*bottom: 85px;*/
+    border-radius: 50%;
+    z-index: 1;
+    -webkit-transform: translateY(200%);
+            transform: translateY(200%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+  }
+  .icon {
+    opacity: 0;
+    font-size: 1em;
+    color: #0c122c;
+  }
+  .bef-icon {
+    margin-top: 10%;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    color: #0c122c;
+  }
+  #bubble1 {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  #bubble1 > span {
+    opacity: 1;
+  }
+  #bgWrapper {
+    -webkit-filter: url(#goo);
+            filter: url(#goo);
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 60px;
+  }
+  #bg {
+    background-color: #111d43;
+    /*this is somehow responsible for the pits*/
+    width: 120%;
+    height: 100%;
+    margin-left: -10%;
+  }
+  #bgBubble {
+    position: absolute;
+    background-color: #111d43;
+    width: 64px;
+    /*4em*/
+    height: 64px;
+    border-radius: 50%;
+    bottom: -50px;
+    left: 1em;
+    /*transform: translateX(100%);the pit's translation*/
+  }
+  #menuWrapper {
+    position: absolute;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .menuElement {
+    opacity: 1;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    cursor: pointer;
+  }
+  .menuElement:hover {
+    opacity: 0.5;
+  }
+  #contentWrapper {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .content {
+    display: none;
+    opacity: 0;
+  }
+  .main-content {
+    display: -ms-grid;
+    display: grid;
+    padding: 2em 2em 1em 2em;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+  }
+  #menu1 {
+    opacity: 0;
+  }
+  .main {
+    -ms-grid-row: 1;
+    grid-row: 1/1;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-left: 0.4em;
+    overflow: hidden;
+    color: white;
+  }
+  .affected-areas {
+    -ms-grid-row: 2;
+    grid-row: 2/2;
+    margin-left: 0.45em;
+    margin-bottom: -0.2em;
+    font-weight: 400;
+    font-size: 1.2em;
+  }
+  .col-1 {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 46;
+    grid-row: 4/50;
+    background-color: #0c122c;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5em;
+  }
+  /*
+  .mode{
+    position: absolute;
+    height: 3em;
+    width: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 70%;
+    left:85%;
+    top:0.5em;
+    background-color: $gradient-color-2;
+    /*background-image: linear-gradient(135deg,$gradient-color-1,$gradient-color-2);
+    color: $icon-color;
+    cursor: pointer;
+
+    transition: all 300ms ease-in;
+  }
+  .mode-icon{
+   pointer-events: none;
+   transform: scale(1);
+   transition: all 200ms ease-out;
+  }
+*/
+  #mapContainer {
+    border-radius: 0.5em;
+  }
+}
+/*# sourceMappingURL=navbar-mobile.css.map */
