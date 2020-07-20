@@ -249,14 +249,6 @@ body {
     display: none;
     opacity: 0;
   }
-  .main-content {
-    display: -ms-grid;
-    display: grid;
-    padding: 2em 2em 1em 2em;
-    height: 100%;
-    width: 100%;
-    z-index: 9;
-  }
   #menu1 {
     opacity: 0;
   }
@@ -312,6 +304,47 @@ body {
 */
   #mapContainer {
     border-radius: 0.5em;
+  }
+  .main-content-1 {
+    display: -ms-grid;
+    display: grid;
+    padding: 2em 1.2em 1em 1.2em;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+  }
+  .main-content-2 {
+    display: -ms-grid;
+    display: grid;
+    padding: 2em 1.2em 1em 1.2em;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+  }
+  .main-content-3 {
+    display: -ms-grid;
+    display: grid;
+    padding: 2em 1.2em 1em 1.2em;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+  }
+  .main-content-4 {
+    display: -ms-grid;
+    display: grid;
+    padding: 2em 1.2em 1em 1.2em;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+  }
+  .main-content-2 {
+    display: none;
+  }
+  .main-content-3 {
+    display: none;
+  }
+  .main-content-4 {
+    display: none;
   }
 }
 /*# sourceMappingURL=navbar-mobile.css.map */

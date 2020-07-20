@@ -221,13 +221,7 @@ body {
     display: none;
     opacity: 0;
   }
-  .main-content{
-    display: grid;
-    padding:2em 2em 1em 2em;
-    height:100%;
-    width:100%;
-    z-index: 9;
-  }
+  
   #menu1{
     opacity:0;
   }
@@ -280,6 +274,23 @@ body {
 */
 #mapContainer{
   border-radius:0.5em ;
+}
+
+//main content for all pages
+@for $i from 1 through 4{
+  .main-content-#{$i}{
+    display: grid;
+    padding:2em 1.2em 1em 1.2em;
+    height:100%;
+    width:100%;
+    z-index: 9;//this is v.imp else the content isn't displayed completely
+  }
+}
+
+@for $k from 2 through 4{
+  .main-content-#{$k}{
+    display: none;
+  }
 }
 
 }
