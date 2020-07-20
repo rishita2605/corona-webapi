@@ -2,30 +2,43 @@
 let citymap =[] 
 let citynames=[];
 
-  fetch('/map')
-    .then((res)=> res.json()
-    .then((data)=>{
-        citymap=data;
-        //console.log(citymap);
-        
-        //MAP RENDERING 
-        function addCircleToMap(map,i){
-            map.addObject(new H.map.Circle(
-            
-              {lng:citymap[i].lng, lat:citymap[i].lat},
-              (citymap[i].cases),
-              {
-                style: {
-                  strokeColor: 'rgba(253, 90, 111, 1)', // Color of the perimeter
-                  lineWidth: 1,
-                  fillColor: 'rgba(253, 90, 111, 0.5)'  // Color of the circle
+
+//STATE WISE GET
+fetch('/state_wise')
+.then((res)=>res.json()
+.then((data)=>{
+
+  console.log(data);
+
+})
+.catch((err)=>console.log(err)));
+
+//MAP RENDER GET
+fetch('/map')
+.then((res)=> res.json()
+.then((data)=>{
+  citymap=data;
+      
+  //MAP RENDERING 
+    function addCircleToMap(map,i){
+    map.addObject(new H.map.Circle(
+      
+      {lng:citymap[i].lng, lat:citymap[i].lat},
+      (citymap[i].cases),
+        {
+          style: {
+              strokeColor: 'rgba(253, 90, 111, 1)', // Color of the perimeter
+              lineWidth: 1,
+              fillColor: 'rgba(253, 90, 111, 0.5)'  // Color of the circle
                 }
               }
             ));
           }
 
-          for(var i=0;i<=citymap.length;i++)
-            addCircleToMap(map,i)
+   for(var i=0;i<=255;i++){
+    addCircleToMap(map,i)
+   }
+       
 
 
 }).catch((err)=>console.log(err)));
@@ -41,28 +54,27 @@ function setStyle(map){
   // set the style on the existing layer
   provider.setStyle(style);
 }
-    
-var platform = new H.service.Platform(
-        {
-          'apikey': '7f1S17sXDV1fKfKFWCrzSpcAlPVvFKabeaRp-jP0xSE'
-        });
-      
-        var defaultLayers = platform.createDefaultLayers();
-      
-           
-      
-            var map = new H.Map(
-        document.getElementById('mapContainer'),
-        defaultLayers.vector.normal.map,
-        { 
-          zoom: 5,
-         center: { lng: 73, lat:19  }
-        });
 
-      var mapEvents = new H.mapevents.MapEvents(map);
+//MAP API KEY
+var platform = new H.service.Platform(
+  {
+    'apikey': '7f1S17sXDV1fKfKFWCrzSpcAlPVvFKabeaRp-jP0xSE'
+  });
+    
+var defaultLayers = platform.createDefaultLayers();
+      
+var map = new H.Map(
+document.getElementById('mapContainer'),
+defaultLayers.vector.normal.map,
+  { 
+    zoom: 5,
+    center: { lng: 73, lat:19  }
+  });
+
+var mapEvents = new H.mapevents.MapEvents(map);
           
           
-     map.addEventListener('tap', function(evt) {
+map.addEventListener('tap', function(evt) {
               
      console.log(evt.type, evt.currentPointer.type);
 });
@@ -73,8 +85,10 @@ var ui = H.ui.UI.createDefault(map, defaultLayers);
 setStyle(map);
 var ctx = document.getElementById('myChart').getContext('2d');
 
-
-fetch('/graph').then((res)=> res.json().then((casesData) => {
+//GRAPH SERVICE
+fetch('/graph')
+.then((res)=> res.json()
+.then((casesData) => {
   let totalCases = []
   casesData.map(city => totalCases = totalCases.concat(city.cases));
   //console.log(totalCases); 
@@ -103,7 +117,6 @@ fetch('/graph').then((res)=> res.json().then((casesData) => {
                 'rgba(75, 192, 192, 2)',
                 'rgba(255, 206, 86, 2)',
                 'rgba(75, 192, 192, 2)',
-                
                 'rgba(255, 206, 86, 2)',
                 'rgba(75, 192, 192, 2)'
             ],
@@ -126,9 +139,20 @@ fetch('/graph').then((res)=> res.json().then((casesData) => {
           }]
       }
   }
-}
-)
-}).catch((err)=>console.log(err)));
+})}).catch((err)=>console.log(err)));
+
+var service = platform.getSearchService();
+
+//SEARCH SERVICE
+service.geocode({
+  q: 'Bengaluru'
+}, (result) => {
+  console.log(result)
+  
+  result.items.forEach((item) => {
+    map.addObject(new H.map.Marker(item.position));
+  });
+}, alert);
 
 
 
