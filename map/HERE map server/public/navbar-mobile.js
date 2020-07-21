@@ -4,6 +4,8 @@ var mo=$(".mode");
 var icon=$(".mode-icon");
 var pageOne=$(".main-content-1");
 var pageTwo=$(".main-content-2");
+var pageThree=$(".main-content-3");
+var pageFour=$(".main-content-4");
 $(".fa-home").on('click',one);
 $(".fa-chart-area").on('click',two);
 $(".fa-hand-holding-medical").on('click',three);
@@ -110,6 +112,6 @@ function four(){
   $('.main-content-3').css("display","none");
   $('.main-content-2').css("display","none");
   //adding link for css file 
-  $(pageTwo).append("<link href='page-2.css' rel='stylesheet' type='text/css'/>");
+  $(pageFour).append("<link href='page-4.css' rel='stylesheet' type='text/css'/>");
 }
 
