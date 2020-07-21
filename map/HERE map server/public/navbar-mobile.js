@@ -7,7 +7,7 @@ var pageTwo=$(".main-content-2");
 $(".fa-home").on('click',one);
 $(".fa-chart-area").on('click',two);
 $(".fa-hand-holding-medical").on('click',three);
-$(".fa-phone-alt").on('click',four);
+$(".fa-info-circle").on('click',four);
 
 
 

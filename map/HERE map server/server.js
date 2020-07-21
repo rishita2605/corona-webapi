@@ -81,12 +81,12 @@ for(var i=0;i<=28;i++){
         recovered:data1[i].recovered,
         deaths:data1[i].deaths, 
     
-        districts:[{d1:data1[i].districtData[0]},
+        districts:data1[i].districtData
+                    /*[{d1:data1[i].districtData[0]},
                     {d2:data1[i].districtData[1]},
                     {d3:data1[i].districtData[2]},
                     {d4:data1[i].districtData[3]},
-                    {d5:data1[i].districtData[4]}]
-
+                    {d5:data1[i].districtData[4]}]*/
     });
     
 }
