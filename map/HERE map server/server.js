@@ -73,15 +73,17 @@ await getData(url);
 res.statusCode = 200;
 res.setHeader("Content-Type", "application/json");
 let statewise=[];
-for(var i=0;i<=28;i++){
+for(var i=0;i<=37;i++){
   statewise.push(
     {
         state:data1[i].state,
         infected:data1[i].confirmed,
         recovered:data1[i].recovered,
         deaths:data1[i].deaths, 
-    
         districts:data1[i].districtData
+    
+       
+                  
 
     });
     
