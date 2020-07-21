@@ -8,7 +8,7 @@ var pageThree=$(".main-content-3");
 var pageFour=$(".main-content-4");
 $(".fa-home").on('click',one);
 $(".fa-chart-area").on('click',two);
-$(".fa-hand-holding-medical").on('click',three);
+$(".fa-clipboard-list").on('click',three);
 $(".fa-info-circle").on('click',four);
 
 
