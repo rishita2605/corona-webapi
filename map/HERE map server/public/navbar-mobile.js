@@ -2,6 +2,12 @@
 //$(".mode").on('click',modeChange);
 var mo=$(".mode");
 var icon=$(".mode-icon");
+var pageOne=$(".main-content-1");
+var pageTwo=$(".main-content-2");
+$(".fa-home").on('click',one);
+$(".fa-chart-area").on('click',two);
+$(".fa-hand-holding-medical").on('click',three);
+$(".fa-info-circle").on('click',four);
 
 
 
@@ -65,3 +71,45 @@ console.log(view);
 var del=view[2];
 console.log(del);
 $(del).remove();
+
+//navigating to first page
+function one(){
+  console.log("one");
+  $('.main-content-1').css("display","grid");
+  $('.main-content-2').css("display","none");
+  $('.main-content-3').css("display","none");
+  $('.main-content-4').css("display","none");
+}
+//navigating to second page
+function two(){
+  console.log("two");
+  $('.main-content-2').css("display","grid");
+  $('.main-content-1').css("display","none");
+  $('.main-content-3').css("display","none");
+  $('.main-content-4').css("display","none");
+  //adding link for css file 
+  $(pageTwo).append("<link href='page-2.css' rel='stylesheet' type='text/css'/>");
+}
+
+//navigating to second page
+function three(){
+  console.log("three");
+  $('.main-content-3').css("display","grid");
+  $('.main-content-1').css("display","none");
+  $('.main-content-2').css("display","none");
+  $('.main-content-4').css("display","none");
+  //adding link for css file 
+  $(pageTwo).append("<link href='page-2.css' rel='stylesheet' type='text/css'/>");
+}
+
+//navigating to second page
+function four(){
+  console.log("four");
+  $('.main-content-4').css("display","grid");
+  $('.main-content-1').css("display","none");
+  $('.main-content-3').css("display","none");
+  $('.main-content-2').css("display","none");
+  //adding link for css file 
+  $(pageTwo).append("<link href='page-2.css' rel='stylesheet' type='text/css'/>");
+}
+

@@ -81,6 +81,9 @@ for(var i=0;i<=37;i++){
         recovered:data1[i].recovered,
         deaths:data1[i].deaths, 
         districts:data1[i].districtData
+    
+       
+                  
 
     });
     
