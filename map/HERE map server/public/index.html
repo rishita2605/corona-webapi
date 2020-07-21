@@ -55,7 +55,10 @@
               <div class="box-6"></div>
              </div> 
           </div>
-          <div class="main-content-3"></div>
+          <div class="main-content-3">
+            <div class="title-3">Analyse Your Symptoms:</div>
+            <span class="list-item"></span><a href="" class="circle one"></a>
+          </div>
           <div class="main-content-4">
             <div class="about">
               <span class="title-4">About Us:</span>
@@ -110,7 +113,7 @@
     <!--SVG added for smoother edges of the nav bar -->
   <svg width="0" height="0" >
     <defs>
-      <filter id="goo">
+      <filter id="goo"> 
         <feGaussianBlur in="SourceGraphic" stdDeviation="20"  id="blurFilter"/>
         <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -15" result="goo" />
         <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
@@ -123,6 +126,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
 <!--my js file-->
 <script src='map.js'></script>
+<script src="symptoms.js"></script>
 <script src="navbar-mobile.js"></script>
 </body>
 </html>
