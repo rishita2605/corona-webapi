@@ -101,7 +101,7 @@ function three(){
   $('.main-content-2').css("display","none");
   $('.main-content-4').css("display","none");
   //adding link for css file 
-  $(pageTwo).append("<link href='page-2.css' rel='stylesheet' type='text/css'/>");
+  $(pageTwo).append("<link href='page-3.css' rel='stylesheet' type='text/css'/>");
 }
 
 //navigating to second page
