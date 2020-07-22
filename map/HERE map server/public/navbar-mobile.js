@@ -1,4 +1,4 @@
-//variables + eventListener
+//variables 
 //$(".mode").on('click',modeChange);
 var mo=$(".mode");
 var icon=$(".mode-icon");
@@ -6,11 +6,13 @@ var pageOne=$(".main-content-1");
 var pageTwo=$(".main-content-2");
 var pageThree=$(".main-content-3");
 var pageFour=$(".main-content-4");
+
+//event listeners
 $(".fa-home").on('click',one);
 $(".fa-chart-area").on('click',two);
 $(".fa-clipboard-list").on('click',three);
 $(".fa-info-circle").on('click',four);
-
+$(".circle").on('click',check);
 
 
 //functions
@@ -115,3 +117,16 @@ function four(){
   $(pageFour).append("<link href='page-4.css' rel='stylesheet' type='text/css'/>");
 }
 
+
+//symptom checker
+function check(e){
+  console.log(e.target);
+  if($(e.target).css("background-color")=="rgba(0, 163, 255, 0.1)"){
+    $(e.target).css("background-color","rgba(0, 163, 255, 1)");
+    $(e.target).css("transform","scale(0.9)");
+  }
+  else{
+    $(e.target).css("background-color","rgba(0, 163, 255, 0.1)");
+    $(e.target).css("transform","scale(1)");
+  }
+}
