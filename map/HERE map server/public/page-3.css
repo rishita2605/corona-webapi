@@ -58,11 +58,16 @@
   position: relative;
   height: 1em;
   width: 1em;
-  border: #83d2ff 2px solid;
+  border: #00a3ff 2px solid;
   border-radius: 70%;
   -ms-grid-column-align: right;
       justify-self: right;
   margin-top: 0.5em;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  background-color: rgba(0, 163, 255, 0.1);
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
 }
 
 .question {

@@ -64,10 +64,13 @@ $height-field:3em;
     position: relative;
    height: 1em;
     width: 1em;
-    border: $after-color 2px solid;
+    border: $gradient-color-2 2px solid;
     border-radius: 70%;
     justify-self: right;
     margin-top: 0.5em;
+    transform: scale(1);
+    background-color:rgba(0, 163, 255, 0.1) ;
+    transition: all 200ms ease;
     
     
 }
