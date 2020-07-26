@@ -147,8 +147,8 @@ body {
   }
   .bubble {
     background-image: linear-gradient(135deg, #aaaaf8, #00a3ff);
-    width: 50px;
-    height: 50px;
+    width: 3em;
+    height: 3em;
     /*bottom: 85px;*/
     border-radius: 50%;
     z-index: 1;
@@ -171,7 +171,7 @@ body {
     color: #0c122c;
   }
   .bef-icon {
-    margin-top: 10%;
+    margin-top: 30%;
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     color: #0c122c;

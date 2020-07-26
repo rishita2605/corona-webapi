@@ -8,7 +8,7 @@ fetch('/state_wise')
 .then((res)=>res.json()
 .then((data)=>{
   console.log("hullo");
-  console.log(data);
+  console.log(data[0]);
 
 })
 .catch((err)=>console.log(err)));
