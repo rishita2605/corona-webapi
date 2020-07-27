@@ -7,12 +7,14 @@ var pageTwo=$(".main-content-2");
 var pageThree=$(".main-content-3");
 var pageFour=$(".main-content-4");
 
+
 //event listeners
 $(".fa-home").on('click',one);
 $(".fa-chart-area").on('click',two);
 $(".fa-clipboard-list").on('click',three);
 $(".fa-info-circle").on('click',four);
 $(".circle").on('click',check);
+$(".fa-caret-down").on('click',dropdown);
 
 
 //functions
@@ -117,7 +119,17 @@ function four(){
   $(pageFour).append("<link href='page-4.css' rel='stylesheet' type='text/css'/>");
 }
 
-
+//second page dropdown 
+function dropdown(){
+  console.log("hullo dropdown");
+  if($('.dropdown-content').css('display')=="none"){
+    $('.dropdown-content').css('display','block');
+  }
+  else{
+    $('.dropdown-content').css('display','none');
+  }
+  
+}
 //symptom checker
 function check(e){
   console.log(e.target);

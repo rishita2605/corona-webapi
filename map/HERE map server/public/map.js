@@ -7,8 +7,8 @@ let citynames=[];
 fetch('/state_wise')
 .then((res)=>res.json()
 .then((data)=>{
-  console.log("hullo");
-  console.log(data[0]);
+  console.log("hullo data");
+  console.log(data);
 
 })
 .catch((err)=>console.log(err)));
