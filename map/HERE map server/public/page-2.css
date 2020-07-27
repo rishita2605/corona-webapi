@@ -79,8 +79,8 @@
   padding: 0.5em;
   text-decoration: none;
   display: block;
-  background-image: -webkit-gradient(linear, left top, right top, from(#aaaaf8), to(#00a3ff));
-  background-image: linear-gradient(90deg, #aaaaf8, #00a3ff);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(170, 170, 248, 0.9)), to(rgba(0, 163, 255, 0.9)));
+  background-image: linear-gradient(90deg, rgba(170, 170, 248, 0.9), rgba(0, 163, 255, 0.9));
 }
 
 .dropdown:active .dropbtn {
