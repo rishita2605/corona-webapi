@@ -6,7 +6,7 @@ var pageOne=$(".main-content-1");
 var pageTwo=$(".main-content-2");
 var pageThree=$(".main-content-3");
 var pageFour=$(".main-content-4");
-
+var triangle=$(".fa-caret-down");
 
 //event listeners
 $(".fa-home").on('click',one);
@@ -14,7 +14,7 @@ $(".fa-chart-area").on('click',two);
 $(".fa-clipboard-list").on('click',three);
 $(".fa-info-circle").on('click',four);
 $(".circle").on('click',check);
-$(".fa-caret-down").on('click',dropdown);
+$(triangle).on('click',dropdown);
 $(".list-item").on('click',listitems);
 
 //functions
@@ -119,7 +119,32 @@ function four(){
   $(pageFour).append("<link href='page-4.css' rel='stylesheet' type='text/css'/>");
 }
 
-//second page dropdown 
+//second page 
+fetch('/state_wise')
+.then((res)=>res.json()
+.then((data)=>{
+  console.log("hullo data");
+  console.log(data);
+
+})
+.catch((err)=>console.log(err)));
+
+
+//selecting items from list
+function listitems(e){
+
+  const item=e.target;
+  const txt=$(item).text();
+  const icon=$(".fa-caret-down").clone();
+  console.log(icon);
+  $(".dropbtn").text(txt);
+
+  $(icon).appendTo(".dropbtn");
+  
+  $(triangle).on('click',dropdown);
+}
+
+//dropdown
 function dropdown(){
   console.log("hullo dropdown");
   if($('.dropdown-content').css('display')=="none"){
@@ -131,53 +156,7 @@ function dropdown(){
   
 }
 
-
-//selecting items from list
-function listitems(e){
-  console.log("lisindi");
-  const item=e.target;
-  console.log($(item).text());
-  
-}
-
-
 //symptom checker
-function check(e){
-  console.log(e.target);
-  if($(e.target).css("background-color")=="rgba(0, 163, 255, 0.1)"){
-    $(e.target).css("background-color","rgba(0, 163, 255, 1)");
-    $(e.target).css("transform","scale(0.9)");
-  }
-  else{
-    $(e.target).css("background-color","rgba(0, 163, 255, 0.1)");
-    $(e.target).css("transform","scale(1)");
-  }
-}//symptom checker
-function check(e){
-  console.log(e.target);
-  if($(e.target).css("background-color")=="rgba(0, 163, 255, 0.1)"){
-    $(e.target).css("background-color","rgba(0, 163, 255, 1)");
-    $(e.target).css("transform","scale(0.9)");
-  }
-  else{
-    $(e.target).css("background-color","rgba(0, 163, 255, 0.1)");
-    $(e.target).css("transform","scale(1)");
-  }
-}//symptom checker
-function check(e){
-  console.log(e.target);
-  if($(e.target).css("background-color")=="rgba(0, 163, 255, 0.1)"){
-    $(e.target).css("background-color","rgba(0, 163, 255, 1)");
-    $(e.target).css("transform","scale(0.9)");
-  }
-  else{
-    $(e.target).css("background-color","rgba(0, 163, 255, 0.1)");
-    $(e.target).css("transform","scale(1)");
-  }
-}
-
-
-//symptom checker--page--3
 function check(e){
   console.log(e.target);
   if($(e.target).css("background-color")=="rgba(0, 163, 255, 0.1)"){
