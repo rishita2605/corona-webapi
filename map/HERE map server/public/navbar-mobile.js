@@ -15,7 +15,7 @@ $(".fa-clipboard-list").on('click',three);
 $(".fa-info-circle").on('click',four);
 $(".circle").on('click',check);
 $(".fa-caret-down").on('click',dropdown);
-
+$(".list-item").on('click',listitems);
 
 //functions
 //nav-bar fluid motion
@@ -130,7 +130,54 @@ function dropdown(){
   }
   
 }
+
+
+//selecting items from list
+function listitems(e){
+  console.log("lisindi");
+  const item=e.target;
+  console.log($(item).text());
+  
+}
+
+
 //symptom checker
+function check(e){
+  console.log(e.target);
+  if($(e.target).css("background-color")=="rgba(0, 163, 255, 0.1)"){
+    $(e.target).css("background-color","rgba(0, 163, 255, 1)");
+    $(e.target).css("transform","scale(0.9)");
+  }
+  else{
+    $(e.target).css("background-color","rgba(0, 163, 255, 0.1)");
+    $(e.target).css("transform","scale(1)");
+  }
+}//symptom checker
+function check(e){
+  console.log(e.target);
+  if($(e.target).css("background-color")=="rgba(0, 163, 255, 0.1)"){
+    $(e.target).css("background-color","rgba(0, 163, 255, 1)");
+    $(e.target).css("transform","scale(0.9)");
+  }
+  else{
+    $(e.target).css("background-color","rgba(0, 163, 255, 0.1)");
+    $(e.target).css("transform","scale(1)");
+  }
+}//symptom checker
+function check(e){
+  console.log(e.target);
+  if($(e.target).css("background-color")=="rgba(0, 163, 255, 0.1)"){
+    $(e.target).css("background-color","rgba(0, 163, 255, 1)");
+    $(e.target).css("transform","scale(0.9)");
+  }
+  else{
+    $(e.target).css("background-color","rgba(0, 163, 255, 0.1)");
+    $(e.target).css("transform","scale(1)");
+  }
+}
+
+
+//symptom checker--page--3
 function check(e){
   console.log(e.target);
   if($(e.target).css("background-color")=="rgba(0, 163, 255, 0.1)"){
