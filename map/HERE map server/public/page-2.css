@@ -61,7 +61,7 @@
 }
 
 .dropdown {
-  position: relative;
+  position: absolute;
   display: inline-block;
 }
 
@@ -71,6 +71,7 @@
   width: 19.5em;
   height: 27.5em;
   overflow: scroll;
+  position: absolute;
 }
 
 .dropdown-content a {
@@ -106,5 +107,29 @@
   font-size: 1.3rem;
   color: #f0f0ff;
   font-weight: 700;
+}
+
+.state-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sub-heading-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5em;
+  color: #aaaaf8;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.num {
+  color: #c0c0f7;
 }
 /*# sourceMappingURL=page-2.css.map */
