@@ -31,7 +31,7 @@ $gradient-color-2:rgba(0, 163, 255, 1);
 
 @for $j from 1 through 2{
     .box-#{$j}{
-        height: 30vh;
+        height: 12em;
         width: 100%;
         background-color: $dark-bg;
         border-radius: 0.5em;
@@ -40,6 +40,11 @@ $gradient-color-2:rgba(0, 163, 255, 1);
 }
 
 //dropdown styling
+.box-2{
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
 
 
 .dropbtn {
@@ -52,24 +57,24 @@ $gradient-color-2:rgba(0, 163, 255, 1);
     border: 2px solid $after-color;
     cursor: pointer;
     height: 2.5em;
-    width: 19.5em;
+    width: 85%;
     transition: all 300ms ease-in;
     padding: 0.5em;
 }
 
 .dropdown {
-    position: absolute;
+    position: relative;
     display: inline-block;
+    width: 100%;
 
 }
 
 .dropdown-content {
     display: none;
-    min-width: 15em;
-    width: 19.5em;
+    width: 85%;
     height: 27.5em;
     overflow: scroll;
-    position:absolute;
+    position:relative;
 }
 
     .dropdown-content a {
@@ -126,4 +131,17 @@ $gradient-color-2:rgba(0, 163, 255, 1);
 
 .num{
     color:rgb(192, 192, 247);
+}
+
+.box-a-1, .cloned{
+    height: 7em;
+    background-color: rgba(17, 29, 67, 0.5);
+    flex-direction: column;
+    margin-bottom: 0.5em;
+}
+
+.distname{
+    color: $after-color;
+    padding:0.5em 0 0.7em 0.5em ;
+    font-size: 1.15rem;
 }
