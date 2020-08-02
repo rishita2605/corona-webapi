@@ -10,15 +10,21 @@ var triangle=$(".fa-caret-down");
 var cnum=$(".confnum");
 var rnum=$(".recnum");
 var dnum=$(".deanum");
+var flagOne=0;
+var flagTwo=0;
+var flagThree=0;
 
 //event listeners
 $(".fa-home").on('click',one);
 $(".fa-chart-area").on('click',two);
 $(".fa-clipboard-list").on('click',three);
 $(".fa-info-circle").on('click',four);
-$(".circle").on('click',check);
+$(".circle-1").on('click',checkOne);
+$(".circle-2").on('click',checkTwo);
+$(".circle-3").on('click',checkTwo);
 $(".dropbtn").on('click',dropdown);
 $(".list-item").on('click',listitems);
+//$(".list-item").on('click', changeContentsFin);
 
 //functions
 //nav-bar fluid motion
@@ -162,35 +168,122 @@ function dropdown(){
 }
 //changing contents i.e no. of cases etc initially
 function changeContentsInit(){
+  let initial=0;
+  var he=120;
+  
+  $(".box-a-1").css("display","flex");
   fetch('/state_wise')
 .then((res)=>res.json()
 .then((data)=>{
+
   console.log("hullo data");
+  he=he + he*data[initial].districts.length;
   console.log(data[0]);
+  $(".box-2").css("height",he);
+  console.log($(".box-2").css("height"));
+
   //finding the data for the state on top 
   for(let i=0;i<data.length;i++){ 
     if(data[i].state==="Andhra Pradesh"){
+       initial=i;
        dnum.text(data[i].deaths);
        rnum.text(data[i].recovered);
        cnum.text(data[i].infected);
     }
   }
 
+console.log(data[initial].districts.length);
+
+var cloned=$(".box-a-1").clone();
+var countClass="box-a-1 clon0";
+var countClassCss=".box-a-1 .clon0";
+$(cloned).appendTo($(".box-2"));
+$(cloned).addClass("clon0");
+$(".distname").text(data[initial].districts[0].name);
+$(".distconfnum").text(data[initial].districts[0].confirmed);
+
+ for(let j=1;j<5;j++){
+    
+    console.log(data[initial].districts[j]);
+  } 
+
 })
 .catch((err)=>console.log(err)));
   
  //for(let i=0;i<data.length;i++);
 }
+
+
 //symptom checker
-function check(e){
-  console.log(e.target);
-  if($(e.target).css("background-color")=="rgba(0, 163, 255, 0.1)"){
-    $(e.target).css("background-color","rgba(0, 163, 255, 1)");
-    $(e.target).css("transform","scale(0.9)");
+function checkOne(evt){
+   if(flagOne>0 && $(evt.target).css("background-color")=="rgb(17, 29, 67)"){
+     alert("You can't chose more than one age group!");
+   }
+   else{
+     changeColor(evt);
+   }
+}
+
+function checkTwo(evt){
+  var elem=evt.target;
+  console.log(!($(elem).hasClass("none")));
+  if($(elem).hasClass("none") && flagTwo==0){
+    changeColor(evt);
+  }
+  else if($(elem).hasClass("none") && flagTwo>0 && flagTwo<999){
+    alert("This is not a valid option. Deselect other options to select this one");
+
+  }
+  else if(!($(elem).hasClass("none")) && $(".none").css("background-color")=="rgb(0, 163, 255)"){
+   
+    alert('Deselect "None Of The Above" to select this option');
+
   }
   else{
-    $(e.target).css("background-color","rgba(0, 163, 255, 0.1)");
-    $(e.target).css("transform","scale(1)");
+    flagTwo=1;
+    changeColor(evt);
   }
 }
 
+function checkThree(evt){
+  var elem=evt.target;
+  if($(elem).hasClass("none") && flagThree==0){
+    flagThree=999;
+    changeColor(evt);
+  }
+  else if($(elem).hasClass("none") && flagThree>0 && flagThree<999){
+    alert("This is not a valid option. Deselect other options to select this one");
+
+  }
+  else if(!($(elem).hasClass("none")) && flagThree>999){
+   
+    alert('Deselect "None Of The Above" to select this option');
+
+  }
+  else{
+    flagThree=1;
+    changeColor(evt);
+  }
+}
+
+
+function changeColor(e){
+
+  if($(e.target).css("background-color")=="rgb(17, 29, 67)"){
+    flagOne++;
+    flagTwo++;
+    flagThree++;
+    $(e.target).css("background-color","rgb(0, 163, 255)");
+    $(e.target).css("transform","scale(0.9)");
+    console.log(flagTwo);
+  }
+  else{
+    $(e.target).css("background-color","rgb(17, 29, 67)");
+    $(e.target).css("transform","scale(1)");
+    flagTwo--;
+    flagOne--;
+    flagThree--;
+    console.log(flagTwo);
+
+  }
+}

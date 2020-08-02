@@ -24,7 +24,7 @@ $gradient-color-2:rgba(0, 163, 255, 1);
   border: none;
 }
 body {
-    background:pink;
+    background:$dark-bg;
     width: 100vw;
     height: 100vh;
     display: flex;
