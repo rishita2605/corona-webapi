@@ -169,14 +169,13 @@ function dropdown(){
 //changing contents i.e no. of cases etc initially
 function changeContentsInit(){
   let initial=0;
-  var he=120;
+  var he=40;
   
-  $(".box-a-1").css("display","flex");
   fetch('/state_wise')
 .then((res)=>res.json()
 .then((data)=>{
 
-  console.log("hullo data");
+
   he=he + he*data[initial].districts.length;
   console.log(data[0]);
   $(".box-2").css("height",he);
@@ -192,27 +191,6 @@ function changeContentsInit(){
     }
   }
 
-console.log(data[initial].districts.length);
-var constClone=0;
-
-$(".distname").text(data[initial].districts[0].name);
-$(".distconfnum").text(data[initial].districts[0].confirmed);
-
- /*for(let j=1;j<5;j++){
-  var cloned=$(".box-a-1").clone();
-  constClone++;
-  var classClone= ".a" + constClone;
-  classClone=classClone + " .distname";
-  console.log(classClone);
-  $(cloned).addClass("a"+constClone);
-  $(cloned).removeClass("box-a-1");
-  $(".a1 .distname").text(data[initial].districts[j].name);
-  console.log($(classClone).text());
-  $(classClone).css("color","white");
-  $(".a1 .distconfnum").text(data[initial].districts[j].confirmed);
-    console.log(data[initial].districts[j]);
-    $(cloned).appendTo($(".box-2"));
-  } */
 
 })
 .catch((err)=>console.log(err)));

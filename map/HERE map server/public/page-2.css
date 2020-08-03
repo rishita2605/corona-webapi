@@ -658,4 +658,8 @@
           flex-direction: column;
   margin-bottom: 0.5em;
 }
+
+.box-a-1 {
+  display: none;
+}
 /*# sourceMappingURL=page-2.css.map */
