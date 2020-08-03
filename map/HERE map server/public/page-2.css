@@ -48,7 +48,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  z-index: 10;
 }
 
 .dropbtn {
@@ -65,7 +64,7 @@
   border: 2px solid #83d2ff;
   cursor: pointer;
   height: 2.5em;
-  width: 85%;
+  width: 100%;
   -webkit-transition: all 300ms ease-in;
   transition: all 300ms ease-in;
   padding: 0.5em;
@@ -79,10 +78,10 @@
 
 .dropdown-content {
   display: none;
-  width: 85%;
+  width: 100%;
   height: 27.5em;
   overflow: scroll;
-  position: relative;
+  position: absolute;
 }
 
 .dropdown-content a {
@@ -144,7 +143,13 @@
   color: #c0c0f7;
 }
 
-.box-a-1, .cloned {
+.distname {
+  color: #83d2ff;
+  padding: 0.5em 0 0.7em 0.5em;
+  font-size: 1.15rem;
+}
+
+.box-a-1, .a0 {
   height: 7em;
   background-color: rgba(17, 29, 67, 0.5);
   -webkit-box-orient: vertical;
@@ -154,9 +159,503 @@
   margin-bottom: 0.5em;
 }
 
-.distname {
-  color: #83d2ff;
-  padding: 0.5em 0 0.7em 0.5em;
-  font-size: 1.15rem;
+.box-a-1, .a1 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a2 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a3 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a4 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a5 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a6 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a7 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a8 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a9 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a10 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a11 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a12 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a13 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a14 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a15 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a16 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a17 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a18 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a19 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a20 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a21 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a22 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a23 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a24 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a25 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a26 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a27 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a28 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a29 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a30 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a31 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a32 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a33 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a34 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a35 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a36 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a37 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a38 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a39 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a40 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a41 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a42 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a43 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a44 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a45 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a46 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a47 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a48 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a49 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.box-a-1, .a50 {
+  height: 7em;
+  background-color: rgba(17, 29, 67, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5em;
 }
 /*# sourceMappingURL=page-2.css.map */
