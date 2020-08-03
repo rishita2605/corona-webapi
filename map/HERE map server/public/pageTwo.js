@@ -13,7 +13,8 @@ function distContent(){
         }
     }
 
-    for(let j=1;j<5;j++){
+    console.log(data[initial].districts.length);
+    for(let j=0 ;j<data[initial].districts.length ; j++){
     
         constClass++;
 
@@ -22,6 +23,7 @@ function distContent(){
         var distname=document.createElement("div");
         var conf=document.createElement("div");
         var confnum=document.createElement("div");
+        var conftxt=document.createElement("div");
 
         //adding classes
         $(district).addClass("a"+constClass);
@@ -29,10 +31,11 @@ function distContent(){
         $(conf).addClass("distconf");
         $(conf).addClass("sub-heading-2");
         $(confnum).addClass("distconfnum");
+        $(conftxt).addClass("distconftxt");
 
         //appending elements
-        
-        
+        $(conf).append($(conftxt));
+        $(conf).append($(confnum));
         $(district).append($(distname));
         $(district).append($(conf));
         $(".box-2").append($(district));
@@ -41,12 +44,10 @@ function distContent(){
 
         //changing text content
         if($(district).hasClass("a"+constClass)){
-            $(conf).text("Confirmed Cases:");
-            
+            $(conftxt).text("Confirmed Cases:");
             $(distname).text(data[initial].districts[j].name);
             console.log($(distname).text());
             $(confnum).text(data[initial].districts[j].confirmed);
-            $(".distconf").append($(confnum));
             console.log($(confnum).text());
         }
         else{
