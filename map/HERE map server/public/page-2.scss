@@ -7,6 +7,14 @@ $icon-color:rgba(12, 18, 44, 1);
 $gradient-color-1:rgba(170, 170, 248, 1);
 $gradient-color-2:rgba(0, 163, 255, 1);
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    font-family: 'Lato', sans-serif;
+}
+
+
 .main-content-2{
     display: grid;
     overflow: scroll;
@@ -19,13 +27,126 @@ $gradient-color-2:rgba(0, 163, 255, 1);
     flex-direction: column;
     
 }
-@for $j from 1 through 6{
+
+
+@for $j from 1 through 2{
     .box-#{$j}{
-        height: 30vh;
+        height: 12em;
         width: 100%;
         background-color: $dark-bg;
-        margin:0.2em;
+        border-radius: 0.5em;
+        padding: 0.7em;
     }
 }
 
+//dropdown styling
+.box-2{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.dropbtn {
+    background-color: transparent;
+    color:$after-color;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em;
+    font-weight:400;
+    border: 2px solid $after-color;
+    cursor: pointer;
+    height: 2.5em;
+    width: 100%;
+    transition: all 300ms ease-in;
+    padding: 0.5em;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+}
+
+.dropdown-content {
+    display: none;
+    width: 100%;
+    height: 27.5em;
+    overflow: scroll;
+    position:absolute;
+}
+
+    .dropdown-content a {
+        color: $dark-bg;
+        padding: 0.5em;
+        text-decoration: none;
+        display: block;
+        background-image: linear-gradient(90deg,rgba(170, 170, 248, 0.95),rgba(0, 163, 255, 0.95));
+        
+    }
+
+
+
+
+.dropdown:active .dropbtn {
+    background-color: rgba(0,0,0,0.9);
+    color: rgb(255, 255, 255);
+    transition: all 400ms ease-in;
+}
+
+.fa-caret-down{
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+.list-item{
+    display: block;
+    color: $dark-bg;
+    height:2.5em;
+    
+}
+
+
+.heading-2{
+    display: block;
+    margin: 0.5em;
+    font-size:1.3rem;
+    color: rgba(240, 240, 255, 1);
+    font-weight: 700;
+}
+
+.state-data{
+    display: flex;
+    flex-direction: column;
+    
+}
+.sub-heading-2{
+    display: flex;
+    padding: 0.5em;
+    color: $before-color;
+    font-weight: 400;
+    font-size: 1.1rem;
+
+}
+
+.num{
+    color:rgb(192, 192, 247);
+}
+
+
+.distname{
+    color: $after-color;
+    padding:0.5em 0 0.7em 0.5em ;
+    font-size: 1.15rem;
+}
+
+@for $t from 0 through 50{
+    .box-a-1, .a#{$t}{
+        height: 7em;
+        background-color: rgba(17, 29, 67, 0.5);
+        flex-direction: column;
+        margin-bottom: 0.5em;
+    }
+}
 

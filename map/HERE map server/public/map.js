@@ -3,15 +3,7 @@ let citymap =[]
 let citynames=[];
 
 
-//STATE WISE GET
-fetch('/state_wise')
-.then((res)=>res.json()
-.then((data)=>{
-  console.log("hullo");
-  console.log(data);
 
-})
-.catch((err)=>console.log(err)));
 
 //MAP RENDER GET
 fetch('/map')

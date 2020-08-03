@@ -73,7 +73,7 @@ await getData(url);
 res.statusCode = 200;
 res.setHeader("Content-Type", "application/json");
 let statewise=[];
-for(var i=0;i<=37;i++){
+for(var i=0;i<=30;i++){
   statewise.push(
     {
         state:data1[i].state,
