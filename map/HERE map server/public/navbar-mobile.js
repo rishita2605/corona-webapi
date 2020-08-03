@@ -169,7 +169,7 @@ function dropdown(){
 //changing contents i.e no. of cases etc initially
 function changeContentsInit(){
   let initial=0;
-  var he=120;
+  var he=40;
   
   fetch('/state_wise')
 .then((res)=>res.json()
