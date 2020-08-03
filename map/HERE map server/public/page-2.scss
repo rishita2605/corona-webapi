@@ -43,7 +43,7 @@ $gradient-color-2:rgba(0, 163, 255, 1);
 .box-2{
     display: flex;
     flex-direction: column;
-    z-index: 10;
+    
 }
 
 
@@ -57,7 +57,7 @@ $gradient-color-2:rgba(0, 163, 255, 1);
     border: 2px solid $after-color;
     cursor: pointer;
     height: 2.5em;
-    width: 85%;
+    width: 100%;
     transition: all 300ms ease-in;
     padding: 0.5em;
 }
@@ -71,10 +71,10 @@ $gradient-color-2:rgba(0, 163, 255, 1);
 
 .dropdown-content {
     display: none;
-    width: 85%;
+    width: 100%;
     height: 27.5em;
     overflow: scroll;
-    position:relative;
+    position:absolute;
 }
 
     .dropdown-content a {
@@ -119,6 +119,7 @@ $gradient-color-2:rgba(0, 163, 255, 1);
 .state-data{
     display: flex;
     flex-direction: column;
+    
 }
 .sub-heading-2{
     display: flex;
@@ -133,15 +134,19 @@ $gradient-color-2:rgba(0, 163, 255, 1);
     color:rgb(192, 192, 247);
 }
 
-.box-a-1, .cloned{
-    height: 7em;
-    background-color: rgba(17, 29, 67, 0.5);
-    flex-direction: column;
-    margin-bottom: 0.5em;
-}
 
 .distname{
     color: $after-color;
     padding:0.5em 0 0.7em 0.5em ;
     font-size: 1.15rem;
 }
+
+@for $t from 0 through 50{
+    .box-a-1, .a#{$t}{
+        height: 7em;
+        background-color: rgba(17, 29, 67, 0.5);
+        flex-direction: column;
+        margin-bottom: 0.5em;
+    }
+}
+

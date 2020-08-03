@@ -193,19 +193,26 @@ function changeContentsInit(){
   }
 
 console.log(data[initial].districts.length);
+var constClone=0;
 
-var cloned=$(".box-a-1").clone();
-var countClass="box-a-1 clon0";
-var countClassCss=".box-a-1 .clon0";
-$(cloned).appendTo($(".box-2"));
-$(cloned).addClass("clon0");
 $(".distname").text(data[initial].districts[0].name);
 $(".distconfnum").text(data[initial].districts[0].confirmed);
 
- for(let j=1;j<5;j++){
-    
+ /*for(let j=1;j<5;j++){
+  var cloned=$(".box-a-1").clone();
+  constClone++;
+  var classClone= ".a" + constClone;
+  classClone=classClone + " .distname";
+  console.log(classClone);
+  $(cloned).addClass("a"+constClone);
+  $(cloned).removeClass("box-a-1");
+  $(".a1 .distname").text(data[initial].districts[j].name);
+  console.log($(classClone).text());
+  $(classClone).css("color","white");
+  $(".a1 .distconfnum").text(data[initial].districts[j].confirmed);
     console.log(data[initial].districts[j]);
-  } 
+    $(cloned).appendTo($(".box-2"));
+  } */
 
 })
 .catch((err)=>console.log(err)));
