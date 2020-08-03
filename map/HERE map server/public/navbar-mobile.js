@@ -171,12 +171,11 @@ function changeContentsInit(){
   let initial=0;
   var he=120;
   
-  $(".box-a-1").css("display","flex");
   fetch('/state_wise')
 .then((res)=>res.json()
 .then((data)=>{
 
-  console.log("hullo data");
+
   he=he + he*data[initial].districts.length;
   console.log(data[0]);
   $(".box-2").css("height",he);
@@ -192,7 +191,6 @@ function changeContentsInit(){
     }
   }
 
-console.log();
 
 })
 .catch((err)=>console.log(err)));

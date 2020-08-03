@@ -14,7 +14,7 @@ function distContent(){
     }
 
     console.log(data[initial].districts.length);
-    for(let j=1;j<data[initial].districts.length ; j++){
+    for(let j=0 ;j<data[initial].districts.length ; j++){
     
         constClass++;
 
