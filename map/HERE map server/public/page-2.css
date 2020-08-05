@@ -48,6 +48,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: auto;
 }
 
 .dropbtn {
@@ -79,7 +80,7 @@
 .dropdown-content {
   display: none;
   width: 100%;
-  height: 27.5em;
+  height: 51.5em;
   overflow: scroll;
   position: absolute;
 }
