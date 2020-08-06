@@ -178,7 +178,7 @@ function changeContentsInit(){
 
   he=he + he*data[initial].districts.length;
   console.log(data[0]);
-  $(".box-2").css("height",he);
+  //$(".box-2").css("height",he);
   console.log($(".box-2").css("height"));
 
   //finding the data for the state on top 
