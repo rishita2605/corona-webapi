@@ -17,7 +17,8 @@ else{
 }
 
 function distContent(){
-    fetch('/state_wise')
+
+fetch('/state_wise')
 .then((res)=>res.json()
 .then((data)=>{
   var constClass=0;

@@ -6,34 +6,46 @@ let citynames=[];
 
 
 //MAP RENDER GET
-fetch('/map')
-.then((res)=> res.json()
-.then((data)=>{
-  citymap=data;
-      
-  //MAP RENDERING 
-    function addCircleToMap(map,i){
-    map.addObject(new H.map.Circle(
-      
-      {lng:citymap[i].lng, lat:citymap[i].lat},
-      (citymap[i].cases),
-        {
-          style: {
-              strokeColor: 'rgba(253, 90, 111, 1)', // Color of the perimeter
-              lineWidth: 1,
-              fillColor: 'rgba(253, 90, 111, 0.5)'  // Color of the circle
+function mapRender(){
+
+  fetch('/map')
+  .then((res)=> res.json()
+  .then((data)=>{
+    citymap=data;
+  
+  
+        
+    //MAP RENDERING 
+      function addCircleToMap(map,i){
+      map.addObject(new H.map.Circle(
+        
+        {lng:citymap[i].lng, lat:citymap[i].lat},
+        (citymap[i].cases),
+          {
+            style: {
+                strokeColor: 'rgba(253, 90, 111, 1)', // Color of the perimeter
+                lineWidth: 1,
+                fillColor: 'rgba(253, 90, 111, 0.5)'  // Color of the circle
+                  }
                 }
-              }
-            ));
-          }
+              ));
+            }
+  
+     for(var i=0;i<=255;i++){
+      addCircleToMap(map,i)
+     }
+  
+  }).catch((err)=>console.log(err)));
 
-   for(var i=0;i<=255;i++){
-    addCircleToMap(map,i)
-   }
-       
+
+}
+
+mapRender();
 
 
-}).catch((err)=>console.log(err)));
+
+
+
 
 
 function setStyle(map){
@@ -133,18 +145,44 @@ fetch('/graph')
   }
 })}).catch((err)=>console.log(err)));
 
-var service = platform.getSearchService();
+
 
 //SEARCH SERVICE
-service.geocode({
-  q: 'Bengaluru'
-}, (result) => {
-  console.log(result)
+function search(){
+
+  var service = platform.getSearchService();
+  var d= document.getElementById('search-field').value;
+  if(d==="india"){
+
+
+    map.removeObjects(map.getObjects())
+
+    mapRender();
+  }
+  else{
+    service.geocode({
+      q:d
+    }, (result) => {
+      console.log(result)
+      
+      result.items.forEach((item) => {
+        map.removeObjects(map.getObjects())
   
-  result.items.forEach((item) => {
-    map.addObject(new H.map.Marker(item.position));
-  });
-}, alert);
+        map.addObject(new H.map.Marker(item.position));
+      });
+    }, alert);
+  }
+
+  
+}
+
+function overall(){
+  
+  map.removeObjects(map.getObjects())
+  mapRender();
+}
+
+
 
 
 
