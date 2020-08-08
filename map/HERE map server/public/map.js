@@ -13,9 +13,7 @@ function mapRender(){
   .then((data)=>{
     citymap=data;
   
-  
-        
-    //MAP RENDERING 
+  //MAP RENDERING 
       function addCircleToMap(map,i){
       map.addObject(new H.map.Circle(
         
@@ -36,16 +34,8 @@ function mapRender(){
      }
   
   }).catch((err)=>console.log(err)));
-
-
 }
-
 mapRender();
-
-
-
-
-
 
 
 function setStyle(map){
@@ -166,9 +156,10 @@ function search(){
       console.log(result)
       
       result.items.forEach((item) => {
+
         map.removeObjects(map.getObjects())
-  
         map.addObject(new H.map.Marker(item.position));
+
       });
     }, alert);
   }

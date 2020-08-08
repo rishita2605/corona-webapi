@@ -1,8 +1,22 @@
 const express=require('express');
 const fetch = require("node-fetch");
 const firebase = require("firebase");
-
 require("firebase/firestore");
+
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDoFv5A9WUltMZJvuj3FkU4FHq0JDxDAec",
+    authDomain: "covid-19-analyser.firebaseapp.com",
+    databaseURL: "https://covid-19-analyser.firebaseio.com",
+    projectId: "covid-19-analyser",
+    storageBucket: "covid-19-analyser.appspot.com",
+    messagingSenderId: "597580544025",
+    appId: "1:597580544025:web:57f2921a94ec519a055288",
+    measurementId: "G-22ZDJHTDYG"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+ 
 
 
 const app=express();
