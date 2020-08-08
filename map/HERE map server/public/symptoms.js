@@ -8,6 +8,23 @@ function geoloc() {
         console.log("The Locator was denied. :(")
     })
 }
+count=0;
+
+function symptomadd(){
+
+    count++;
+
+    if(count>3)
+        //display message 2
+        
+    if(count<3){
+        //display message 1
+    }
+
+}
+
+
+    
 
 
 
