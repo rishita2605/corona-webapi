@@ -293,5 +293,15 @@ body {
   }
 }
 
+.search-btn{
+  background-color: transparent;
+  color: $before-color;
+  border:none;
+  position: absolute;
+  display: flex;
+  margin-top: 1em;
+  margin-left: 92%;
+}
+
 }
 
