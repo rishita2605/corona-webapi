@@ -157,7 +157,9 @@ function search(){
       
       result.items.forEach((item) => {
 
-        map.removeObjects(map.getObjects())
+        //map.removeObjects(map.getObjects())
+  
+
         map.addObject(new H.map.Marker(item.position));
 
       });
