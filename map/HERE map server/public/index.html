@@ -37,8 +37,8 @@
 <body>
     <div id="navbarContainer">
           <!--Page-1-->
-          <button type=button onclick='search()'>Search</button>
-          <button type=button onclick='overall()'>Overall</button>
+          
+          <!--button type=button onclick='overall()'>Overall</button-->
 
 
           <div class="main-content-1">
@@ -51,9 +51,11 @@
               <input type="text" name="name" id='search-field' required autocomplete="off">
               <label name="name" class="label-name">
                   <span class="content-name">
-                     Search
+                     Search 
                   </span>
+                  
               </label>
+              <button type=button class="search-btn" onclick='search()'><i class="fas fa-search"></i></button>
            </div>
             <div class="map col-1" id="mapContainer">
             </div>
