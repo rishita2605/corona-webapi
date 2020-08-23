@@ -143,31 +143,131 @@
                Which age category do you belong to? 
              </div>
              <div class="question-set-1">
-               <div class="question"><p class="quest">Age below 15 </p><a href="#" class="circle-1 qs11"  onclick="symptomadd()"></a></div>
+              <div class="container-list">
+                <ul>
+                    <li>
+                      <input type="radio" id="opt-1" name="selector">
+                      <label for="opt-1">Age below 15</label>
+                      
+                      <div class="check"></div>
+                    </li>
+                    
+                    <li>
+                      <input type="radio" id="opt-2" name="selector">
+                      <label for="opt-2">Age between 15 and 45</label>
+                      
+                      <div class="check"><div class="inside"></div></div>
+                    </li>
+                    
+                    <li>
+                      <input type="radio" id="opt-3" name="selector">
+                      <label for="opt-3">Age above 45</label>
+                      
+                      <div class="check"><div class="inside"></div></div>
+                    </li>
+                  </ul>
+            </div>
+               <!--div class="question"><p class="quest">Age below 15 </p><a href="#" class="circle-1 qs11"  onclick="symptomadd()"></a></div>
                <div class="question"><p class="quest">Age between 15 and 45</p> <a href="#" class="circle-1 qs12"  onclick="removeSym()"></a></div>
-               <div class="question"><p class="quest">Age above 45</p><a href="#" class="circle-1 qs13" onclick="symptomadd()"></a></div>
+               <div class="question"><p class="quest">Age above 45</p><a href="#" class="circle-1 qs13" onclick="symptomadd()"></a></div-->
              </div>
              <div class="sub-heading-3">
               Are there any Chances that you came in contact with a covid positive patient? 
             </div>
              <div class="question-set-2">
-              <div class="question q2"><p class="quest">> Have you travelled internationally/domestically in the past 28-45 days?</p><a href="#" class="circle-2 qs21" onclick="symptomadd()"></a></div>
+              <div class="container-list">
+                <ul>
+                    <li>
+                      <input type="checkbox" id="opt-4" name="selector">
+                      <label for="opt-4">Have you travelled internationally/domestically in the past 28-45 days?</label>
+                      
+                      <div class="check"></div>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="opt-5" name="selector">
+                      <label for="opt-5">Have you interacted with a patient tested with COVID-19 recently?</label>
+                      
+                      <div class="check"><div class="inside"></div></div>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="opt-6" name="selector">
+                      <label for="opt-6">Are you a health care worker and possibly came in contact with a covid+ patient without proper protection?</label>
+                      
+                      <div class="check"><div class="inside"></div></div>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="opt-7" name="selector">
+                      <label for="opt-7">None of the above</label>
+                      
+                      <div class="check"><div class="inside"></div></div>
+                    </li>
+                  </ul>
+            </div>
+              <!--div class="question q2"><p class="quest">> Have you travelled internationally/domestically in the past 28-45 days?</p><a href="#" class="circle-2 qs21" onclick="symptomadd()"></a></div>
               <div class="question q2"><p class="quest">> Have you interacted with a patient tested with COVID-19 recently? </p><a href="#" class="circle-2 qs22" onclick="pakkaAffected()"></a></div>
               <div class="question q2"><p class="quest">> Are you a health care worker and possibly came in contact with a covid+ patient without proper protection?</p><a href="#" class="circle-2 qs23" onclick="pakkaAffected()"></a></div>
-              <div class="question q2"><p class="quest">> None of the above</p><a href="#" class="circle-2 qs24 none"  onclick="removeSym()"></a></div>
+              <div class="question q2"><p class="quest">> None of the above</p><a href="#" class="circle-2 qs24 none"  onclick="removeSym()"></a></div-->
             </div>
             <div class="sub-heading-3">
               Have you ever been diagonosed with any of these?
             </div>
              <div class="question-set-2">
-              
-              <div class="question q2"><p class="quest"> Diabetes</p><a href="#" class="circle-3 qs11" onclick="symptomadd()"></a></div>
+              <div class="container-list">
+                <ul>
+                    <li>
+                      <input type="checkbox" id="opt-8" name="selector">
+                      <label for="opt-8">Diabetes</label>
+                      
+                      <div class="check"></div>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="opt-9" name="selector">
+                      <label for="opt-9">Hypertension</label>
+                      
+                      <div class="check"></div>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="opt-10" name="selector">
+                      <label for="opt-10">AIDS</label>
+                      
+                      <div class="check"></div>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="opt-11" name="selector">
+                      <label for="opt-11">Lung Disease</label>
+                      
+                      <div class="check"></div>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="opt-12" name="selector">
+                      <label for="opt-12">Heart Disease</label>
+                      
+                      <div class="check"></div>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="opt-13" name="selector">
+                      <label for="opt-13">Kidney Disorder</label>
+                      
+                      <div class="check"></div>
+                    </li>
+                    
+                    <li>
+                      <input type="checkbox" id="opt-14" name="selector">
+                      <label for="opt-14">None of the above</label>
+                      
+                      <div class="check"><div class="inside"></div></div>
+                    </li>
+                  </ul>
+            </div>
+              <!--div class="question q2"><p class="quest"> Diabetes</p><a href="#" class="circle-3 qs11" onclick="symptomadd()"></a></div>
               <div class="question q2"><p class="quest"> Hypertension</p><a href="#" class="circle-3 qs12" onclick="symptomadd()"></a></div>
               <div class="question q2"><p class="quest"> AIDS</p><a href="#" class="circle-3 qs13" onclick="symptomadd()"></a></div>
               <div class="question q2"><p class="quest"> Lung Disease</p><a href="#" class="circle-3 qs13" onclick="symptomadd()"></a></div>
               <div class="question q2"><p class="quest"> Heart Disease</p><a href="#" class="circle-3 qs13" onclick="symptomadd()"></a></div>
               <div class="question q2"><p class="quest"> Kidney Disorder </p><a href="#" class="circle-3 qs13" onclick="symptomadd()"></a></div>
-              <div class="question q2"><p class="quest">None of the above</p><a href="#" class="circle-3 qs13 none" onclick="removeSym()" ></a></div>
+              <div class="question q2"><p class="quest">None of the above</p><a href="#" class="circle-3 qs13 none" onclick="removeSym()" ></a></div-->
               <button type="button" class="geoloc" onclick="done()">DONE</button>
               <button type="button" class="geoloc" onclick="reset()">RESET</button>
 
